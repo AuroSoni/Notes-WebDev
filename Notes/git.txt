@@ -18,3 +18,6 @@
   git pull                                  //can result in merge conflicts
 8. Inquiring branch:
   git branch
+9. Creating/ Changing current branch:
+  git branch <branch_name>
+  git checkout <branch_name>
