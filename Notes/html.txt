@@ -1,0 +1,25 @@
+1. basic setup:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+  </head>
+  <body>
+    Hello world
+  </body>
+</html>
+2. Headings:
+  <h1></h1>                 //largest
+  ...
+  <h6></h6>                 //smallest
+3. Lists:
+  i)Ordered lists:
+    <ol>
+    <li>text
+    <li>text
+    </ol>
+  ii)Unordered lists:
+    <ul>
+    <li>text
+    <li>text
+    </ul>
