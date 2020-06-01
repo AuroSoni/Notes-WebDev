@@ -56,3 +56,9 @@
 10. Hyperlinks:
   <a href="filename.html">Click here</a>    //can also link to other websites.
   <a href="#section1">Click here</a>        //linking to different sections of page via id.
+11. HTML 4 organization:
+  <div class="header">
+  <div class="nav">
+  <div class="section">
+  <div class="footer">
+  ...
