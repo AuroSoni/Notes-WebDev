@@ -45,6 +45,11 @@
     <button>Submit!</button>
   </form>
 7. Document Object Models
-8. Divisions :
-  <div>
+8. Divisions and Spans:
+  <div id="name1">
+    ljdfj <span class="name">top</span> ajsbfj
   </div>
+  <div id="name2">
+    ljdfj <span class="name">top</span> ajsbfj
+  </div>
+9. ids are unique but class might not be.
