@@ -1,0 +1,18 @@
+1. Cloning a remote repo to our system (in proper directory):
+  git clone <url>
+2. tracking multiple files and then committing them at once:
+  git add <filename.ext>
+  git commit -m "a message"
+  git commit -am "a message"
+3. status of tracked files:
+  git status
+4. commit history
+  git log     //detailed , not appreciated as it hangs cmd(I don't know how to exit)
+  git reflog  //summarized
+5. reverting to a previous version:
+  git reset --hard origin/master            //to the current head of commit history
+  git reset --hard <commit_hash>            //to a particular commit
+6. pushing our changes to remote repo:
+  git push
+7. pulling from remote repo:
+  git pull                                  //can result in merge conflicts
