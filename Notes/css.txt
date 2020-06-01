@@ -13,3 +13,7 @@
   </head>
 3. Separate stylesheet(in head):
   <link rel="stylesheet" href="stylesheet.css">
+4. Other attributes:
+  a) background-color
+  b) width
+  c) height
