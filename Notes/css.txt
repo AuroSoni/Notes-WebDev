@@ -17,3 +17,10 @@
   a) background-color
   b) width
   c) height
+  d) margin            //between the browser and the element
+  e) padding           //between the content of container and the element itself
+  f) font-family: Arial, sans-serif;      //If fonts might not be available. First font is rendered with priority.
+  g) font-size
+  h) font-weight: bold |...;
+  i) border: 3px solid|dotted|... blue;
+  j)
