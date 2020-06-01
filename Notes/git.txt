@@ -23,3 +23,8 @@
   git checkout <branch_name>
 10. Merging brances:
   git merge<branch_name>                  //do that while on master. Can result in merge conflicts.
+11. Git remotes:
+  remotes are remote repos for eg. origin.
+  git fetch                              //downloads the latest commits from remote
+  git merge origin/master                //updates our local repo
+  git pull                               //combo of fetch and merge
