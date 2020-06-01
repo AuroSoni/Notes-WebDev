@@ -16,3 +16,5 @@
   git push
 7. pulling from remote repo:
   git pull                                  //can result in merge conflicts
+8. Inquiring branch:
+  git branch
