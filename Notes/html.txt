@@ -45,3 +45,6 @@
     <button>Submit!</button>
   </form>
 7. Document Object Models
+8. Divisions :
+  <div>
+  </div>
