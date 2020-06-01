@@ -25,3 +25,12 @@
   i) border: 3px solid|dotted|... blue;
   j) border-collapse: collapse;         //removing double borders esp in Tables
   k) text-align:center|...;
+5. Referring to id's and classes:
+  <style>
+    #name1{             //pound(#) stands for id
+      css-properties;
+    }
+    .name{             //. refers to class
+      css-properties;
+    }
+  </style>
