@@ -1,0 +1,13 @@
+1. Inline style
+  <h1 style="color:name; text-align:[center | ...];">text</h1>   //140 named colors in css
+  //colorname can be name or hexvalue(eg #060e07)
+2. Style in head
+  <head>
+  <title>title</title>
+    <style>
+      h1 {
+        color: blue;
+        text-align: center;
+      }
+    </style>
+  </head>
