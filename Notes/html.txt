@@ -54,4 +54,5 @@
   </div>
 9. ids are unique but class might not be.
 10. Hyperlinks:
-  <a href="filename.html">Click here</a>
+  <a href="filename.html">Click here</a>    //can also link to other websites.
+  <a href="#section1">Click here</a>        //linking to different sections of page via id.
