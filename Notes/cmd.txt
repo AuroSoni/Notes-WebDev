@@ -1,6 +1,6 @@
 1. To get to the right workspace:
   cd <path>     //Change directory
-2. to open a file:
+2. to open/making a file:
   <prog_name> [path]filename      //prog_name eg. atom
   [path]filename                  //opens using default program
 3. making/removing a directory:
