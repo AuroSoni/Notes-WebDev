@@ -1,0 +1,21 @@
+1. To get to the right workspace:
+  cd <path>     //Change directory
+2. to open a file:
+  <prog_name> [path]filename      //prog_name eg. atom
+  [path]filename                  //opens using default program
+3. making/removing a directory:
+  mkdir <destination>
+  rd <dirname>                   //remove directory
+4. Show files:
+ dir [dirname]
+ dir
+5. moving files or renaming directories
+  move [/y | /-y] [path]filename1 destination    //moves the file
+  move [/y | /-y] [path]dirname1 dirname2        //renames the dir
+  // [/y] means suppress prompting for overwrite
+  //[/-y] means don't suppress prompting for overwrite.
+6. renaming a file:
+  rename [path]filename1 filename2
+  rename "[path]filename1" "filename2"          //if filename contains spaces
+7. Deleting a file:
+  del [/P] [...] filename                      //[/P] prompts for confirmation before deletion
