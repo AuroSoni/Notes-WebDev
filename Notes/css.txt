@@ -11,3 +11,5 @@
       }
     </style>
   </head>
+3. Separate stylesheet(in head):
+  <link rel="stylesheet" href="stylesheet.css">
