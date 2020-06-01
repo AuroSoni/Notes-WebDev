@@ -23,3 +23,19 @@
     <li>text
     <li>text
     </ul>
+4. Images:
+  <img src="[path]filename">      //full resolution img displayed
+  <img src="..." height="no" width="no">    //no in pixels
+  <img src="..." height="no">               //proportionate img resolution
+  <img src="..." height="percent">          //responsive to browser size
+5. Tables:
+  <table>
+    <tr>
+      <th>text</th>
+      ...more ths          //table headings
+    </tr>
+    <tr>
+      <td>text</td>
+      ...more tds         //table data
+    </tr>
+  </table>
