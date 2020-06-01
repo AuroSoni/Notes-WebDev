@@ -39,3 +39,9 @@
       ...more tds         //table data
     </tr>
   </table>
+6. forms:
+  <form>
+    <input type="type_name" placeholder="" name="">
+    <button>Submit!</button>
+  </form>
+7. Document Object Models
