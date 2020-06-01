@@ -23,4 +23,5 @@
   g) font-size
   h) font-weight: bold |...;
   i) border: 3px solid|dotted|... blue;
-  j)
+  j) border-collapse: collapse;         //removing double borders esp in Tables
+  k) text-align:center|...;
