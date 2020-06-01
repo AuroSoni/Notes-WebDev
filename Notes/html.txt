@@ -53,3 +53,5 @@
     ljdfj <span class="name">top</span> ajsbfj
   </div>
 9. ids are unique but class might not be.
+10. Hyperlinks:
+  <a href="filename.html">Click here</a>
