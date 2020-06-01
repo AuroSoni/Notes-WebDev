@@ -28,3 +28,7 @@
   git fetch                              //downloads the latest commits from remote
   git merge origin/master                //updates our local repo
   git pull                               //combo of fetch and merge
+12. Fork and pull request:
+  forking a repo to modify for eg an open-source project. Creates a new repo.
+  Pull request as a means to merge one branch of a repo with some other branch in the same
+  repo or even in a different repo. 
