@@ -62,3 +62,15 @@
   <div class="section">
   <div class="footer">
   ...
+12. HTML 5 organization(It has its own tags):
+  <header>
+  <nav>
+  <section>
+  <footer>
+  ...
+13. Some new HTML5 tags:
+  <audio>
+  <video>
+  <datalist>
+14. Auto-fill as <datalist>
+  {see form.html}
