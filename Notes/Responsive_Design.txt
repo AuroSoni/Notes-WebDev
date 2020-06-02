@@ -9,7 +9,7 @@
   i)<head>
       //viewport is the visible area of the device-screen or browser-screen
       //this line adjusts the viewport according to device size
-      //It prevents the text from getting too small
+      //It prevents the text from getting too small.
       <meta name = "viewport" content="width=device-width, initial-scale=1.0">
       <style>
         @media print{
