@@ -74,3 +74,9 @@
   <datalist>
 14. Auto-fill as <datalist>
   {see form.html}
+  <input list="countries" name="country" placeholder="Country">
+  <datalist id="countries">
+    <option value="India">
+    <option value="Indonesia">
+    <option value="Inca">
+  </datalist>
