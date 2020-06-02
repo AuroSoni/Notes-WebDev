@@ -23,11 +23,17 @@
   ii)<head>
     <style>
       @media (min-width : 500px){
+        h1::before{
+          content: "Welcome to my Webpage!";
+        }
         body{
           background-color: red;
         }
       }
       @media (max-width : 499px){
+      h1::before{
+        content: "Welcome!";
+      }
         body{
           background-color: blue;
         }
