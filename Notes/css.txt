@@ -34,3 +34,40 @@
       css-properties;
     }
   </style>
+6. CSS selectors:
+  i) Attribute selector:
+    input[type=text]{
+      CSS-properties;
+     }                                  //Selecting attributes
+  ii)Multiple element selector:
+    h1, h2{
+      ...
+    }
+  iii)Descendent selector:
+    ol li{
+      ...
+    }
+  iv)Immediate Child selector:
+    ol > li{
+      ...
+    }
+  v) Adjacent Sibling Selector:
+    a + b{
+      ...
+    }
+
+  vi)Pseudoclass selector
+  vii) Pseudoelement selector
+
+7. pseudo-classes(represent a particular state of an HTML element):
+  button:hover{
+    CSS..
+  }
+8. pseudo-elements:
+  a::before{
+    content : "\21d2 Click Here: ";
+  }
+  //styling happens before the content of the element.
+  //there is also ::after.
+  //\21d2 is a special symbol hex value(here an implies sign).
+  //::selection does sth when the element is selected(for copying, etc).
