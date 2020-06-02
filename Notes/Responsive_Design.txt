@@ -1,0 +1,39 @@
+1. Strategies:
+  a) viewport
+  b) Media Queries
+  c) Flexbox
+  d) Grids
+2. Media Queries:
+  Styling content for a particular framework.
+  Eg:
+  i)<head>
+      <style>
+        @media print{
+          .screen-only{
+            display: none;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <p>one</p>
+      <p>two</p>
+      <p class = "screen-only">three</p>
+    </body>
+  ii)<head>
+    <style>
+      @media (min-width : 500px){
+        body{
+          background-color: red;
+        }
+      }
+      @media (max-width : 499px){
+        body{
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Big Heading</h1>
+  </body>
