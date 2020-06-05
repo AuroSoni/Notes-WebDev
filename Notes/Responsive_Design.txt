@@ -3,7 +3,7 @@
   b) Media Queries
   c) Flexbox
   d) Grids
-2. Media Queries:
+2. Media Queries and viewport:
   Styling content for a particular framework.
   Eg:
   i)<head>
