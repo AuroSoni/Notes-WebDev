@@ -92,3 +92,7 @@
       </div>
       ..more rows
     </div>
+  --Alert-messages:
+    class="alert alert-primary" role="alert"
+    class="alert alert-success" role="alert"
+    class="alert alert-danger" role="alert"
