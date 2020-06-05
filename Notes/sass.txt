@@ -6,3 +6,27 @@
   ul{
     color: $color;
   }
+3. sass is not understood by browsers.
+   Its built on top of css.
+4. Nesting elements.
+   div{
+    font-size : 18px;
+    p{
+      color : blue;
+    }
+    ul{
+      color : green;
+    }
+   }
+5. Inheritance:
+   %message {    //% defines a template
+    CSS-props;
+   }
+   .success{
+    @extend %message;
+    more props;
+   }
+   .failure{
+    @extend %message;
+    more props;
+   }
