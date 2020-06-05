@@ -1,0 +1,8 @@
+1. Compile to css:
+   sass variables.scss variables.css
+   sass --watch variables.scss:variables.css  //changes .css whenever .scss is modified.
+2. var declaration($):
+  $color : red;
+  ul{
+    color: $color;
+  }
