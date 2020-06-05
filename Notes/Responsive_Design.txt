@@ -47,3 +47,30 @@
   <body>
     <h1>Big Heading</h1>
   </body>
+3. Flexbox:
+  <style>
+    .container{
+      display : flex;
+      flex-wrap: wrap;
+    }
+    .container>div{
+      CSS-props;
+    }
+  </style>
+4. Grid-style(adjustable columns):
+  <style>
+    .grid{
+      display : grid;
+      grid-column-gap: 20px;
+      grid-row-gap: 10px;
+      grid-template-columns: 200px 200px auto;  //only 3rd column is automatically adjusted here.
+    }
+    .grid-item{
+      CSS_props;
+    }
+  </style>
+  ...
+  <div class="grid">
+    <div class="grid-item">abc</div>
+    ...
+  </div>
