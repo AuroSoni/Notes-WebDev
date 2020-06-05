@@ -74,3 +74,21 @@
     <div class="grid-item">abc</div>
     ...
   </div>
+5. bootstrap(getbootstrap.com):
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  crossorigin="anonymous">
+
+  --bootstrap provides pre-defined classes.
+  --It is written using flexbox
+  --Each row is divided in 12 columns.
+  --Eg:
+    <div class="container">
+      <div class="row">
+        <div class="col-3">  or class="col-lg-3 col-sm-6"
+          ...
+        </div>
+        ..more columns
+      </div>
+      ..more rows
+    </div>
