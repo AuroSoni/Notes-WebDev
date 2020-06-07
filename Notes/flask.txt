@@ -34,3 +34,13 @@
    s.add(3)
    s.add(1)
    print(s)                   //{1,3}
+7. Dictionaries(Mapping values):
+   ages = {"Alice": 22, "Bob": 27}  //maps keys to values
+   ages["Charlie"] = 30             //adds the element
+   ages["Alice"] += 1
+   print(ages)            //{'Alice': 23, 'Bob': 27, 'Charlie': 30}
+8. Functions:
+   def square(x):
+      return x*x
+   for i in range(10):
+      print("{} squared is {}".format(i,square(i)))  //an older way of formatting
