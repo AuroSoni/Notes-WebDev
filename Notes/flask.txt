@@ -1,0 +1,4 @@
+1. Python commands:
+  i)  print("Hello")
+  ii) name=input()
+  iii)print(f"Hello {name}!")
