@@ -18,4 +18,8 @@
 4. Sequences:
    name = "Alice"       //char array
    coordinates = (10.0, 20.0)     //tuple: groups 2 values
-   names = ["Alice", "Bob", "Charlie"]  //python list 
+   names = ["Alice", "Bob", "Charlie"]  //python list
+   //ACCESS:
+   name[0]
+   coordinates[0]
+   names[0]
