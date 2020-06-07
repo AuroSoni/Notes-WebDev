@@ -18,8 +18,19 @@
 4. Sequences:
    name = "Alice"       //char array
    coordinates = (10.0, 20.0)     //tuple: groups 2 values
-   names = ["Alice", "Bob", "Charlie"]  //python list
+   names = ["Alice", "Bob", "Charlie"]  //python list: Can contain different types
    //ACCESS:
    name[0]
    coordinates[0]
    names[0]
+5. Loops:
+   for i in range(5):
+      print(i)                   //prints 0-4 on each line
+   for name in names:
+      print(name)                //Loops within a sequence
+6. Sets(no data repetition allowed):
+   s= set()
+   s.add(1)
+   s.add(3)
+   s.add(1)
+   print(s)                   //{1,3}
