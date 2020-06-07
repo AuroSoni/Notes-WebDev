@@ -15,3 +15,7 @@
       print("x is negative")
    else:
       print("x is zero")
+4. Sequences:
+   name = "Alice"       //char array
+   coordinates = (10.0, 20.0)     //tuple: groups 2 values
+   names = ["Alice", "Bob", "Charlie"]  //python list 
