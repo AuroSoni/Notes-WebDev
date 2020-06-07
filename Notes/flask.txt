@@ -2,3 +2,8 @@
   i)  print("Hello")
   ii) name=input()
   iii)print(f"Hello {name}!")
+2. Data types(automatic assignment):
+   i=28
+   f=2.8
+   b=True            //T must be capital
+   n=None            //N must be capital
