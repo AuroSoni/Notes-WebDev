@@ -44,3 +44,6 @@
       return x*x
    for i in range(10):
       print("{} squared is {}".format(i,square(i)))  //an older way of formatting
+9. Exceptions:
+    -Name error   //if name is undefined
+    -Index error     //in arrays
