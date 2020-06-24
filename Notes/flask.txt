@@ -62,3 +62,16 @@
     p = Point(3,5)
     print(p.x)
     print(p.y)
+12. Flask is a micro-framework written in python.
+    -flask code for your website is gen stored in a file called application.py
+    -you have to install the flask module.
+    -written in terms of routes.
+    -eg:
+      from flask import flask
+
+      //makes this file(__name__) a flask application
+      app = Flask(__name__)
+
+      @app.route("/")   //"/" represents the default page
+      def index():      //tied to the default route
+        return "Hello, world!"
