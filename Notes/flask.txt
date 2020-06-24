@@ -28,7 +28,7 @@
       print(i)                   //prints 0-4 on each line
    for name in names:
       print(name)                //Loops within a sequence
-6. Sets(no data repetition allowed):
+6. Sets(no data repetition allowed):   //don't preserve order of info
    s= set()
    s.add(1)
    s.add(3)
