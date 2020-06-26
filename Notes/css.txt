@@ -71,3 +71,12 @@
   //there is also ::after.
   //\21d2 is a special symbol hex value(here an implies sign).
   //::selection does sth when the element is selected(for copying, etc).
+9. Importing css into another css file:
+    1. @import "style1.css"
+    2. @import url("style2.css")
+10. CSS Properties:
+    i) font: font-style font-variant font-weight font-size/line-height font-family|caption|icon|menu|message-box|small-caption|status-bar|initial|inherit;
+       //initial: sets back to default value
+       //inherit: inherits from parent
+       eg:
+       font: italic small-caps bold 12px/30px Georgia, serif;
