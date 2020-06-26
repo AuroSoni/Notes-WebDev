@@ -72,6 +72,131 @@
       //makes this file(__name__) a flask application
       app = Flask(__name__)
 
-      @app.route("/")   //"/" represents the default page
+      @app.route("/")   //"/" represents the default page // called a decorator
       def index():      //tied to the default route
-        return "Hello, world!"
+        return "Hello, world!" //can include html code in return string
+13. Setting flask environment variable and the venv:
+
+    -env\Scripts\activate
+
+    -set FLASK_APP=application.py
+
+    -flask debug mode: dynamically updates the website:
+    set FLASK_ENV=development
+
+14. Adding variable routes:
+    @app.route("/<string:name>")
+    def hello(name):
+      return f"Hello, {name}"
+15. Rendering html files:
+    -include:
+      from flask import Flask, render_template
+    -in the routed function return this:
+      return render_template("index.html")
+    //!!!!!!! the file "index.html" should be in a neighboring
+    //directory templates of the application.py
+16. Adding variables:
+    @app.route("/")
+    def index():
+    headline = "Hello, world!"
+    return render_template("index.html", headline=headline)
+    //the lvalue headline is variable ref used in the html file
+
+    Inside html file:
+    <h1>{{ headline }}</h1>
+    //ginger 2 syntax
+
+17. python datetime module:
+
+    import datetime
+
+    -using datetime:
+    now = datetime.datetime.now()
+    day = now.day
+    month = now.month
+
+18. ginger 2 conditions in html:
+
+    {% if boolean_var %}
+      ...html tags and content
+    {% else %}
+      ...
+    {% endif %}
+
+19. ginger 2 loops in html:
+
+    {% for name in names %}
+      ...
+      {{ name }}
+      ...
+    {% endfor %}
+
+20. ginger 2 hyperlinks in html:
+
+    <a href="{{ url_for('another_route') }}">Go to another_route</a>
+    //!! links to the function another_route. The route can be
+    changed without affecting it.
+
+22. Template inheritance using ginger2:
+
+    -In the basic template replace modifiable templates as such:
+    <body>
+      <h1>{% block heading %}{% endblock %}</h1>
+      {% block body %}
+      {% endblock %}
+      ..
+      more blocks can be included
+      ..
+    </body>
+    -In the derived file do this:
+    {% extends "base.html" %}   #line-1
+    {% block heading %}
+      ..content
+    {% endblock %}
+    {% block body %}
+    ..can include anything a normal html does
+    {% endblock %}
+23. Submitting forms (posting data):
+    -The default http protocol method is 'get'
+    -We need 'post' method to submit data to the server.
+    -html form example:
+    <form action="{{ url_for('hello') }}" method="post">
+      <input type="text" name="name" placeholder="Enter your Name">
+      <button>Submit</button>
+      //Dbt: is this tag not allowed attributes
+      //On clicking submit the hello() is executed.
+      //You can submit the form by using get method too
+      //but then the input field is displayed in the url
+    </form>
+    -in application.py:
+    from flask import FLASK, render_template, request
+    ...
+    @app.route("/hello", methods=["POST"])
+    def hello():
+      name = request.form.get("name")
+      return render_template("hello.html", name=name)
+    #If you directly go to the hello route you get a "Method Not Allowed"
+    #If "GET" is also added to the list you get a "Hello None" on the Page
+    #ie. name = None by default
+    #To avoid such behavior you can do this:
+      if request.method=="GET":
+        return "Please fill the form first!"
+24. Sessions:
+    -imports:
+      from flask import session
+      from flask_session import Session
+    -Config:
+      app.config["SESSION_PERMANENT"] = False
+      app.config["SESSION_TYPE"] = "filesystem"
+
+      Session(app)
+    -Usage:
+    @app.route("/", methods=["GET", "POST"])
+    def index():
+        if(session.get("notes") is None):
+            session["notes"] = []
+        if request.method == "POST":
+            note = request.form.get("note")
+            session["notes"].append(note)
+
+        return render_template("index_sessions.html", notes = session["notes"])
