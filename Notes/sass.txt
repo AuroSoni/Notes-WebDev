@@ -30,3 +30,8 @@
     @extend %message;
     more props;
    }
+   .victory{
+    @extend .success;
+    ..more props..
+   }
+   //the Inheritance can also be done from other css classes not only from templates
