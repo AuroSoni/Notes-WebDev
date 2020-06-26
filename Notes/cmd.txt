@@ -1,7 +1,12 @@
 1. To get to the right workspace:
   cd <path>     //Change directory
+  - To move to a neighbouring directory:
+    cd ../<dir-name>
+  - To move to the parent directory:
+    cd ..
 2. to open/making a file:
   <prog_name> [path]filename      //prog_name eg. atom
+  <prog_name> .                   //opens the current dir in the program
   [path]filename                  //opens using default program
 3. making/removing a directory:
   mkdir <destination>
