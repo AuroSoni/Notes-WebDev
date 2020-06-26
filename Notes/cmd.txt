@@ -19,3 +19,4 @@
   rename "[path]filename1" "filename2"          //if filename contains spaces
 7. Deleting a file:
   del [/P] [...] filename                      //[/P] prompts for confirmation before deletion
+8. Clear terminal: cls
