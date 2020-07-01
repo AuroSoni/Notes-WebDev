@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\aurok\OneDrive\Documents\WebDev\env"
+VIRTUAL_ENV="C:\Users\aurok\Documents\WebDev\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
