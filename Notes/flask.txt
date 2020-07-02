@@ -2,6 +2,10 @@
   i)  print("Hello")
   ii) name=input()
   iii)print(f"Hello {name}!")
+
+  Python Comments:
+  - # :single line comments
+  - """ : multiline comments ends with : """
 2. Data types(automatic assignment):
    i=28
    f=2.8
