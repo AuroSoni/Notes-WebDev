@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+success
+{% endblock %}
+
+{% block heading %}
+Booking Successfull
+{% endblock %}
+
+{% block body %}
+{{passenger_name}} successfully booked a flight from {{flight.origin}} to {{flight.destination}}.<br>
+Duration: {{flight.duration}}min
+{% endblock %}
