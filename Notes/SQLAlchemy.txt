@@ -1,4 +1,4 @@
-1. Connecting with the databse
+1. Connecting with the database
     -In order to integrate these databases into web applications, the Python code
      running the web server must also be able to run SQL commands. SQLAlchemy is
      a Python library that allows for this functionality.
@@ -54,3 +54,130 @@
     for values. This allows for the substitution of Python variables into SQL
     commands. Additionally, SQLAlchemy automatically takes care of sanitizing the
     values passed in.
+3. Incorporating SQL into Web Applications with Flask
+   Everything discussed so far can be implemented in the exact same way inside a
+   Flask application. Some of the code to add to application.py (along with the
+   necessary import and set up statements) could look like this:
+
+      @app.route("/")
+      def index():
+          flights = db.execute("SELECT * FROM flights").fetchall()
+          return render_template("index.html", flights=flights)
+
+      @app.route("/book", methods=["POST"])
+      def book():
+          # Get form information.
+          name = request.form.get("name")
+          try:
+              flight_id = int(request.form.get("flight_id"))
+          except ValueError:
+              return render_template("error.html", message="Invalid flight number.")
+
+          # Make sure the flight exists.
+          if db.execute("SELECT * FROM flights WHERE id = :id", {"id": flight_id}).rowcount == 0:
+              return render_template("error.html", message="No such flight with that id.")
+          db.execute("INSERT INTO passengers (name, flight_id) VALUES (:name, :flight_id)",
+                  {"name": name, "flight_id": flight_id})
+          db.commit()
+          return render_template("success.html")
+
+  -The try block of code is always run. If there is an error, and in particular,
+   a ValueError, the code in the except block is run. The program’s flow then
+   continues as normal.
+  -rowcount is a SQLAlchemy feature that is a property of db.execute(), which is
+   equal the number of rows returned by the query.
+  -error.html and success.html could be generic templates that render the error
+   message and some success statement, respectively.
+
+    The corresponding index.html:
+
+      <form action="{{ url_for('book') }}" method="post">
+
+          <div class="form-group">
+              <select class="form-control" name="flight_id">
+                  {% for flight in flights %}
+                      <option value="{{ flight.id }}">{{ flight.origin }} to {{ flight.destination }}</option>
+                  {% endfor %}
+              </select>
+          </div>
+
+          <div class="form-group">
+              <input class="form-control" name="name" placeholder="Passenger Name">
+          </div>
+
+          <div class="form-group">
+              <button class="btn btn-primary">Book Flight</button>
+          </div>
+
+      </form>
+
+  -Note that some elements, such as the form-control class, are Bootstrap components.
+  -name attributes are relevant for referencing them in Python code.
+  -As is shown, the same dot notation that can be used in Python can also be used
+   in Jinja2 templating.
+  -Taking this example one step further, it is possible to set up individual web
+   pages for each flight that display some information about that flight.
+   Here’s some Python code that would take care of the routing for these new pages:
+
+      @app.route("/flights")
+      def flights():
+          flights = db.execute("SELECT * FROM flights").fetchall()
+          return render_template("flights.html", flights=flights)
+
+      @app.route("/flights/<int:flight_id>")
+      def flight(flight_id):
+          # Make sure flight exists.
+          flight = db.execute("SELECT * FROM flights WHERE id = :id", {"id": flight_id}).fetchone()
+          if flight is None:
+              return render_template("error.html", message="No such flight.")
+
+          # Get all passengers.
+          passengers = db.execute("SELECT name FROM passengers WHERE flight_id = :flight_id",
+                                  {"flight_id": flight_id}).fetchall()
+          return render_template("flight.html", flight=flight, passengers=passengers)
+
+  -/flights is a going to be a generic route to simply display a list of all flights.
+  -Additionally, /flights/<int:flight_id> provides for any individual flight’s
+   info page. <int:flight_id> is a variable that is going to passed to Flask by
+   the HTML in flights.html. This variable is then passed to the flight function,
+   which passes the id into a SQL query to get all the info about the flight,
+   including all of the passengers on that flight.
+
+    flights.html:
+
+      <ul>
+          {% for flight in flights %}
+              <li>
+                  <a href="{{ url_for('flight', flight_id=flight.id) }}">
+                      {{ flight.origin }} to {{ flight.destination }}
+                  </a>
+              </li>
+          {% endfor %}
+      </ul>
+
+  -It’s in the link here that flight.id, which is an column from the row flight,
+   which comes from looping through flights, which in turn was passed in from
+   the Python code for /flights. It’s given the variable name flight_id,
+   which is what the python route for /flights/<int:flight_id> expects.
+
+    flight.html:
+
+      <h1>Flight Details</h1>
+
+      <ul>
+          <li>Origin: {{ flight.origin }}</li>
+          <li>Destination: {{ flight.destination }}</li>
+          <li>Duration: {{ flight.duration}} minutes</li>
+      </ul>
+
+      <h2>Passengers</h2>
+      <ul>
+          {% for passenger in passengers %}
+              <li>{{ passenger.name }}</li>
+          {% else %}
+              <li>No passengers.</li>
+          {% endfor %}
+      </ul>
+
+  -The only new piece here is using {% else %} with a for-loop to account for
+   the case where passengers is empty.
