@@ -81,7 +81,7 @@
         return "Hello, world!" //can include html code in return string
 13. Setting flask environment variable and the venv:
 
-    -env\Scripts\activate
+    -env\Scripts\activate   //backslash is imp
 
     -set FLASK_APP=application.py
 
