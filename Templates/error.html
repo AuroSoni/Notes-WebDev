@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Null error
+{% endblock %}
+
+{% block heading %}
+ERROR!
+{% endblock %}
+
+{% block body %}
+Possible Causes:
+<ul>
+  <li>No passenger name was filled</li>
+  <li>Illegal Flight reference</li>
+</ul>
+<a href="{{url_for('index')}}">Return to Booking</a>
+{% endblock %}
