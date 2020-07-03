@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Success
+{% endblock %}
+
+{% block heading %}
+SUCCESS!
+{% endblock %}
+
+{% block body %}
+<ul>
+  <li>{{message}}
+</ul>
+<a href="{{url_for('index')}}">Return to flights</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Error
+{% endblock %}
+
+{% block heading %}
+ERROR!
+{% endblock %}
+
+{% block body %}
+Possible Causes:
+<ul>
+  <li>{{message}}
+</ul>
+<a href="{{url_for('book')}}">Return to Booking</a>
+{% endblock %}
